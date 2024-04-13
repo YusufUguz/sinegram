@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movies_and_series_app/model/movie_model.dart';
 
-class RatingContainer extends StatelessWidget {
-  const RatingContainer({
+class RatingContainerMovies extends StatelessWidget {
+  const RatingContainerMovies({
     super.key,
     required this.movie,
   });
@@ -15,9 +15,9 @@ class RatingContainer extends StatelessWidget {
     late Color containerColor;
     if (movie.voteAverage > 6.5) {
       containerColor = Colors.green;
-    } else if (movie.voteAverage <= 6.5) {
+    } else if (movie.voteAverage >= 4 && movie.voteAverage <= 6.5) {
       containerColor = Colors.blue;
-    } else if (movie.voteAverage < 4) {
+    } else {
       containerColor = Colors.red;
     }
     return Container(

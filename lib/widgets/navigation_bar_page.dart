@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:movies_and_series_app/features/home/home_page.dart';
-import 'package:movies_and_series_app/features/categories/view/categories_page.dart';
+import 'package:movies_and_series_app/features/genres/view/genres_page.dart';
+import 'package:movies_and_series_app/features/home/view/home_page.dart';
 import 'package:movies_and_series_app/features/lists/view/lists_page.dart';
 import 'package:movies_and_series_app/features/profile/view/profile_page.dart';
 import 'package:movies_and_series_app/widgets/custom_appbar.dart';
@@ -17,7 +17,7 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
   static const List<Widget> _screens = <Widget>[
     HomePage(),
-    CategoriesPage(),
+    GenresPage(),
     ListsPage(),
     ProfilePage(),
   ];

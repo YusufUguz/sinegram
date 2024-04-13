@@ -24,6 +24,7 @@ class Sinegram extends StatelessWidget {
               actionsIconTheme:
                   IconThemeData(color: Constants.appsLighterMainColor),
               backgroundColor: Color(0xff24292F),
+              elevation: 0,
               scrolledUnderElevation: 0)),
       home: const SplashScreen(),
     );

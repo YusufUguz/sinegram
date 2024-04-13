@@ -1,4 +1,4 @@
-class Movie {
+class Series {
   final int id;
   final String title;
   final String overview;
@@ -6,28 +6,25 @@ class Movie {
   final double voteAverage;
   final String wideImagePath;
   final List<dynamic> genreIds;
-  final String releaseDate;
 
-  Movie(
+  Series(
       {required this.id,
       required this.title,
       required this.overview,
       required this.posterPath,
       required this.voteAverage,
       required this.wideImagePath,
-      required this.releaseDate,
       required this.genreIds});
 
-  factory Movie.fromJson(Map<String, dynamic> json) {
-    return Movie(
+  factory Series.fromJson(Map<String, dynamic> json) {
+    return Series(
         id: json['id'],
-        title: json["title"] ?? "",
+        title: json["name"] ?? "",
         overview: json["overview"] ?? "",
         posterPath: json["poster_path"] ?? "",
         voteAverage: json["vote_average"].toDouble(),
         wideImagePath: json["backdrop_path"] ?? "",
-        genreIds: json["genre_ids"],
-        releaseDate: json["release_date"]);
+        genreIds: json["genre_ids"]);
   }
 
   @override

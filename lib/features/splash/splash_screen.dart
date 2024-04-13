@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:movies_and_series_app/features/home/main_page.dart';
+import 'package:movies_and_series_app/widgets/navigation_bar_page.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -16,7 +16,7 @@ class SplashScreen extends StatelessWidget {
       );
     });
 
-    return SafeArea(
+    return SafeArea(                             
       child: Scaffold(
         body: Container(
           decoration: const BoxDecoration(

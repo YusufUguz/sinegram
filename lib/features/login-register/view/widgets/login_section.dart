@@ -16,7 +16,7 @@ class LoginSection extends StatelessWidget {
             SliverFillRemaining(
               hasScrollBody: false,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(
                     "assets/images/logo4clipped.png",

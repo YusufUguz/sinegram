@@ -19,7 +19,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
           width: 20,
           height: 20,
           child: Checkbox(
-            checkColor: Colors.white,
+            checkColor: Colors.black,
             value: isChecked,
             onChanged: (bool? value) {
               setState(() {
@@ -31,9 +31,11 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
         const SizedBox(
           width: 10,
         ),
-        const Text(
-          "Kullanım Koşullarını okudum,onaylıyorum.",
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        const Expanded(
+          child: Text(
+            "Kullanım Koşullarını okudum,onaylıyorum.",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          ),
         ),
       ],
     );
