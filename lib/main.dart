@@ -1,10 +1,18 @@
 // ignore_for_file: library_private_types_in_public_api
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:movies_and_series_app/core/color_schemes.g.dart';
 import 'package:movies_and_series_app/core/constants.dart';
 import 'package:movies_and_series_app/features/splash/splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyA8t5D16EiToMab4MVvzu8baeY0nMtE7cQ",
+          appId: "1:184940264925:android:8d4d9593148f38cf3bca34",
+          messagingSenderId: "184940264925",
+          projectId: "sim-44fe1"));
   runApp(const Sinegram());
 }
 

@@ -28,8 +28,8 @@ class LoginRegisterPage extends StatelessWidget {
               )
             ]),
           ),
-          body: const TabBarView(
-            children: [LoginSection(), RegisterSection()],
+          body: TabBarView(
+            children: [const LoginSection(), RegisterSection()],
           ),
         ));
   }

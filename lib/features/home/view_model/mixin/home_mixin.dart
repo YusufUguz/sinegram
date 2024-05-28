@@ -33,7 +33,7 @@ mixin HomeMixin<HomePage extends StatefulWidget> on State<HomePage>
   Future<void> fetchMovies(
       String movieType, List<Movie> movieList, bool isNeedRegion) async {
     try {
-      int totalPages = 20;
+      int totalPages = 5;
       List<Movie> fetchedMovies = [];
       for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
         final List<Movie> currentPageMovies =
@@ -54,7 +54,7 @@ mixin HomeMixin<HomePage extends StatefulWidget> on State<HomePage>
   Future<void> fetchSeries(
       String seriesType, List<Series> seriesList, String filters) async {
     try {
-      int totalPages = 20;
+      int totalPages = 5;
       List<Series> fetchedSeries = [];
 
       for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {

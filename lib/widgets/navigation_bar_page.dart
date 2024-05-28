@@ -15,11 +15,11 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
-  static const List<Widget> _screens = <Widget>[
-    HomePage(),
-    GenresPage(),
+  static final List<Widget> _screens = <Widget>[
+    const HomePage(),
+    const GenresPage(),
     ListsPage(),
-    ProfilePage(),
+    const ProfilePage(),
   ];
 
   void _onItemTapped(int index) {

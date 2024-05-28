@@ -22,7 +22,7 @@ class Series {
         title: json["name"] ?? "",
         overview: json["overview"] ?? "",
         posterPath: json["poster_path"] ?? "",
-        voteAverage: json["vote_average"].toDouble(),
+        voteAverage: json["vote_average"].toDouble() ?? 0.0,
         wideImagePath: json["backdrop_path"] ?? "",
         genreIds: json["genre_ids"]);
   }

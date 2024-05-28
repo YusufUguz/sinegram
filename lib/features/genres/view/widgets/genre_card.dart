@@ -11,7 +11,7 @@ class GenreCard extends StatelessWidget {
     required this.genreType,
   });
 
-  final Genre genre;
+  final GeneralGenre genre;
   String genreType;
 
   @override

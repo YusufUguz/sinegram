@@ -5,9 +5,11 @@ class CustomButton extends StatelessWidget {
   CustomButton({
     super.key,
     required this.text,
+    this.onPressed,
   });
 
   String text;
+  void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class CustomButton extends StatelessWidget {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
             backgroundColor: const Color(0xFFA1C9FF)),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Text(

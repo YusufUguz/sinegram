@@ -13,7 +13,7 @@ class MovieGenresPage extends StatefulWidget {
 }
 
 class _MovieGenresPageState extends State<MovieGenresPage> {
-  List<Genre> genres = [];
+  List<GeneralGenre> genres = [];
   List<int> selectedGenreIds = [];
   String selectedGenreName = "";
 
@@ -25,10 +25,11 @@ class _MovieGenresPageState extends State<MovieGenresPage> {
 
   Future<void> fetchGenres() async {
     try {
-      final List<Genre> fetchedGenres = await MovieService.fetchMoviesGenres();
+      final List<GeneralGenre> fetchedGenres =
+          await MovieService.fetchMoviesGenres();
       final List<String> excludedGenres = ['TV film', 'Aile', 'Müzik'];
       setState(() {
-        final List<Genre> filteredGenres = fetchedGenres.where((genre) {
+        final List<GeneralGenre> filteredGenres = fetchedGenres.where((genre) {
           return !excludedGenres.contains(genre.name);
         }).toList();
         genres.clear();

@@ -1,13 +1,13 @@
-class Genre {
+class GeneralGenre {
   int id;
   String name;
 
-  Genre({
+  GeneralGenre({
     required this.id,
     required this.name,
   });
 
-  factory Genre.fromJson(Map<String, dynamic> json) => Genre(
+  factory GeneralGenre.fromJson(Map<String, dynamic> json) => GeneralGenre(
         id: json["id"],
         name: json["name"],
       );
